@@ -1,0 +1,237 @@
+[
+  // Expand selection
+  // It allows you to quickly select words, content between parentheses, square brackets, curly braces, etc
+  {
+    "key": "cmd+e",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+e",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  // Navigation
+  // Navigate/select to next blank line
+  {
+    "key": "alt+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine"
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+shift+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine",
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine"
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+shift+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine",
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  // Navigate/select by N lines
+  {
+    "key": "cmd+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 7,
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+shift+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 7,
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 7
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+shift+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 7,
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  // Move to start/end of file (cmd+up, cmd+down) is used to navigate by N lines
+  {
+    "key": "cmd+k down",
+    "command": "cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+k up",
+    "command": "cursorTop",
+    "when": "textInputFocus"
+  },
+  // Move no next change in file
+  {
+    "key": "cmd+k cmd+n",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  // Show/hide Panels
+  {
+    "key": "cmd+k cmd+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "cmd+k cmd+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "cmd+k cmd+d",
+    "command": "workbench.action.debug.nextConsole"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+shift+j",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
+  // Navigate between pinned files
+  // This will close all tabs, leaving only the pinned ones. This command will then cycle through only the 'visible/pinned' tabs.
+  {
+    "key": "f1",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+  },
+  {
+    "key": "alt+p",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeAllEditors",
+        "workbench.action.showAllEditorsByMostRecentlyUsed"
+      ]
+    }
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  // Others
+  {
+    // Create new terminal
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    // Kill focused terminal
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    // Create new file when focus is in the file explorer
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    // Create new folder when focus is in the file explorer
+    "key": "shift+cmd+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    // Run test at the cursor
+    "key": "cmd+t",
+    "command": "testing.runAtCursor",
+    "when": "editorTextFocus"
+  },
+  {
+    // Re run last test
+    "key": "cmd+k cmd+t",
+    "command": "testing.reRunLastRun"
+  },
+  {
+    // Navigate forward. The same shortcut used in the browser
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    // Navigate back. The same shortcut used in the browser
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    // opt+up/down is used for navigation, so we need a shortcut to duplicate lines.
+    "key": "cmd+shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+space",
+    "command": "cursorRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+g",
+    "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+shift+r",
+    "command": "workbench.action.showAllSymbols"
+  }
+]
