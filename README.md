@@ -28,3 +28,10 @@ pro tip: Hold `cmd` or `alt` and keep pressing `p` to go to the next file
 I created the `alt+p` shortcut, which works like the `cmd+p` (quick open) but only shows the pinned tabs.
 
 This command is useful when I need to edit some main files but also explore various other files. This quickly clutters the recently opened list. So, when I decide that a file is important, I pin it with `f1`, and then it will be available when I press `alt+p`.
+
+## Karabiner
+
+right_command + ijkl: arrow keys
+hold caps_lock: open apps shortcuts
+hold caps_lock + right_command + ijkl: media keys (volume up/down, next/previous)
+hold caps_lock + p: play/pause
