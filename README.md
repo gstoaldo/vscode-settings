@@ -31,7 +31,12 @@ This command is useful when I need to edit some main files but also explore vari
 
 ## Karabiner
 
-right_command + ijkl: arrow keys
-hold caps_lock: open apps shortcuts
-hold caps_lock + right_command + ijkl: media keys (volume up/down, next/previous)
-hold caps_lock + p: play/pause
+- right_command + ijkl: arrow keys
+- hold caps_lock: open apps shortcuts
+- hold caps_lock + right_command + ijkl: media keys (volume up/down, next/previous)
+- hold caps_lock + p: play/pause
+- opt as delimiter (symbols) layer:
+
+  - opt + u/i: parentheses
+  - opt + j/k: square brackets
+  - opts + m/,: curly brackets
