@@ -37,6 +37,54 @@
       "manipulators": [
         {
           "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Visual Studio Code'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.google.Chrome"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
             "key_code": "j",
             "modifiers": {
               "mandatory": [
@@ -44,7 +92,8 @@
                 "left_control",
                 "left_shift",
                 "left_option"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -63,7 +112,8 @@
                 "left_control",
                 "left_shift",
                 "left_option"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -82,7 +132,8 @@
                 "left_control",
                 "left_shift",
                 "left_option"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -101,7 +152,8 @@
                 "left_control",
                 "left_shift",
                 "left_option"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -126,7 +178,8 @@
                 "left_shift",
                 "left_option",
                 "right_command"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -146,7 +199,8 @@
                 "left_shift",
                 "left_option",
                 "right_command"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -166,7 +220,8 @@
                 "left_shift",
                 "left_option",
                 "right_command"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -186,7 +241,8 @@
                 "left_shift",
                 "left_option",
                 "right_command"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
@@ -205,7 +261,8 @@
                 "left_control",
                 "left_shift",
                 "left_option"
-              ]
+              ],
+              "optional": "caps_lock"
             }
           },
           "to": [
